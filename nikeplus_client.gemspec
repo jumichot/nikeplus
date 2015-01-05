@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = NikeplusClient::VERSION
   spec.authors       = ["julien michot"]
   spec.email         = ["ju.michot@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{nike+ client to retrieve activities}
+  spec.description   = %q{nike+ client to retrieve activities}
   spec.homepage      = ""
   spec.license       = "MIT"
 
