@@ -1,3 +1,4 @@
-require 'nikeplus_client'
 require 'coveralls'
 Coveralls.wear!
+
+require 'nikeplus_client'
