@@ -1,5 +1,7 @@
 # NikeplusClient
 
+[![Build Status](https://travis-ci.org/jumichot/nikeplus_client.svg?branch=master)](https://travis-ci.org/jumichot/nikeplus_client)
+
 TODO: Write a gem description
 
 ## Installation
