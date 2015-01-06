@@ -1,9 +1,8 @@
 # NikeplusClient
 
 [![Build Status](https://travis-ci.org/jumichot/nikeplus_client.svg?branch=master)](https://travis-ci.org/jumichot/nikeplus_client)
-[![Coverage Status](https://coveralls.io/repos/jumichot/nikeplus_client/badge.png)](https://coveralls.io/r/jumichot/nikeplus_client)
+[![Coverage Status](https://coveralls.io/repos/jumichot/nikeplus_client/badge.png?branch=master)](https://coveralls.io/r/jumichot/nikeplus_client?branch=master)
 [![Dependency Status](https://gemnasium.com/jumichot/nikeplus_client.svg)](https://gemnasium.com/jumichot/nikeplus_client)
-
 TODO: Write a gem description
 
 ## Installation
