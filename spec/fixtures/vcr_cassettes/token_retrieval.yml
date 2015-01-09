@@ -34,7 +34,7 @@ http_interactions:
       - xPetaPwjVYnFL07_VuwheCUMFol1OwSmzD3Aqlo5Bm6kf1A5ec15bw==
     body:
       encoding: UTF-8
-      string: '{"access_token":"COADSUHvqUdFsE9q0i2i3v0UbM","expires_in":"3600","profile_img_url":"","token_type":"bearer"}'
+      string: '{"access_token":"thetoken","expires_in":"3600","profile_img_url":"","token_type":"bearer"}'
     http_version: 
   recorded_at: Thu, 08 Jan 2015 22:14:17 GMT
 recorded_with: VCR 2.8.0
