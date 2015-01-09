@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://developer.nike.com/services/login
+    body:
+      encoding: US-ASCII
+      string: username=wrong%40bar.com&password=foobar
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 401
+      message: ''
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '42'
+      Connection:
+      - keep-alive
+      Cache-Control:
+      - max-age=1800, s-maxage=120
+      Date:
+      - Fri, 09 Jan 2015 14:08:46 GMT
+      Server:
+      - Apache/2.2.22 (Ubuntu)
+      X-Pad:
+      - avoid browser bug
+      X-Cache:
+      - Error from cloudfront
+      Via:
+      - 1.1 e74e470f1bdc8f4aa4a0fe919b14ce93.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - 3CqcsebP6Do5TEmPb65FvlW0jeW0bLDHvu1PU1VNvYNHRtfl56RjTA==
+    body:
+      encoding: UTF-8
+      string: '{"error":"Failed : HTTP error code : 401"}'
+    http_version: 
+  recorded_at: Fri, 09 Jan 2015 14:04:27 GMT
+recorded_with: VCR 2.8.0
