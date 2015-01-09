@@ -27,6 +27,24 @@ Or install it yourself as:
 
 TODO: Write usage instructions here
 
+## Tests
+Run tests with:
+```ruby
+bundle exec rspec
+```
+or
+```ruby
+guard
+```
+If you want guard notification on OS X you need to install terminal-notifier-guard:
+```ruby
+brew install terminal-notifier
+```
+Then
+```ruby
+gem install terminal-notifier-guard
+```
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/nikeplus_client/fork )
