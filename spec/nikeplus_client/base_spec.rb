@@ -17,4 +17,10 @@ describe NikeplusClient::Base do
     response = double(:data => {:body=>"{\"access_token\":\"thetoken\"}"})
     expect(base.extract_hash_from_json_response_body(response)).to eq({"access_token" => "thetoken"})
   end
+
+  it "#build_params" do
+    # TODO: set @token for base class and modify this test
+    str = base.build_params({hello: "the world"})
+    expect(str).to eq "access_token&hello=the+world"
+  end
 end
