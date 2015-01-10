@@ -21,7 +21,7 @@ describe NikeplusClient::Base do
   it "#build_params" do
     # TODO: set @token for base class and modify this test
     str = base.build_params({hello: "the world"})
-    expect(str).to eq "access_token&hello=the+world"
+    expect(str).to eq "hello=the+world"
   end
 
   it "#get_request" do

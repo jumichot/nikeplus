@@ -11,7 +11,8 @@ module NikeplusClient
     end
 
     def build_params(options)
-      URI.encode_www_form({access_token: @token}.merge(options))
+      params = @token ? {access_token: @token}.merge(options) : options
+      URI.encode_www_form(params)
     end
 
     def extract_hash_from_json_response_body(response)
