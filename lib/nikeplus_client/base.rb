@@ -6,6 +6,10 @@ module NikeplusClient
                  headers: { 'Content-Type' => 'application/x-www-form-urlencoded' })
     end
 
+    def get_request(url)
+      Excon.get(url)
+    end
+
     def build_params(options)
       URI.encode_www_form({access_token: @token}.merge(options))
     end

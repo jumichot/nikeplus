@@ -7,7 +7,7 @@ module NikeplusClient
     end
 
     def fetch(options = {count:  999})
-      response = Excon.get(API_URL + "?#{build_params(options)}")
+      response = get_request(API_URL + "?#{build_params(options)}")
       extract_hash_from_json_response_body(response)["data"]
     end
   end

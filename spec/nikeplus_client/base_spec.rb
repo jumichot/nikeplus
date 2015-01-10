@@ -23,4 +23,10 @@ describe NikeplusClient::Base do
     str = base.build_params({hello: "the world"})
     expect(str).to eq "access_token&hello=the+world"
   end
+
+  it "#get_request" do
+    stub_request(:get, "www.example.com").to_return(:body => "ok")
+    response = base.get_request("http://www.example.com")
+    expect(response.body).to eq "ok"
+  end
 end
