@@ -8,7 +8,10 @@ module NikeplusClient
 
     def fetch(options = {count:  999})
       response = get_request(build_url(options))
-      extract_hash_from_json_response_body(response)["data"]
+      data = extract_hash_from_json_response_body(response)["data"]
+      data.map do |activity|
+        Activity.new(activity)
+      end
     end
 
     private
