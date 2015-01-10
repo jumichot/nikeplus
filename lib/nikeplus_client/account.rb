@@ -1,5 +1,5 @@
 module NikeplusClient
-  class Account
+  class Account < Base
     def initialize(username, password)
       @username = username
       @password = password
@@ -7,8 +7,7 @@ module NikeplusClient
 
     def token
       return @access_token if @access_token
-      response = request_token
-      response = extract_json_from_response_body(response.data[:body])
+      response = extract_hash_from_json_response_body(request_token)
       fail WrongCredential if response.key?('error')
       @access_token = response['access_token']
     end
@@ -16,13 +15,7 @@ module NikeplusClient
     private
 
     def request_token
-      Excon.post('https://developer.nike.com/services/login',
-                 body: URI.encode_www_form(username: @username, password: @password),
-                 headers: { 'Content-Type' => 'application/x-www-form-urlencoded' })
-    end
-
-    def extract_json_from_response_body(json)
-      JSON.parse(json)
+      post_request('https://developer.nike.com/services/login', username: @username, password: @password)
     end
   end
 
