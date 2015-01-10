@@ -5,7 +5,7 @@ describe NikeplusClient::Activities do
 
   it 'retrieve activities' do
     VCR.use_cassette("activities") do
-      activities = NikeplusClient::Activities.new(token: token)
+      activities = NikeplusClient::Activities.new(token)
       expect(activities.fetch).to be_kind_of(Array)
     end
   end
