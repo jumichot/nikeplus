@@ -1,5 +1,5 @@
 module NikeplusClient
-  class Client
+  class Account
     def initialize(username, password)
       @username = username
       @password = password
