@@ -1,0 +1,30 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.nike.com/v1/me/sport/activities?access_token=OwTyiRUlhaNVIP8AKVfYrUA9a1wl
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.42.1
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Server:
+      - Jetty(9.0.z-SNAPSHOT)
+      X-B3-Traceid:
+      - "-2032518295294255853"
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"links":[{"rel":"self","href":"https://api.nike.com/v1/me/sport/activities/3198000000000671826980007382618856048442"}],"activityId":"3198000000000671826980007382618856048442","activityType":"RUN","startTime":"2015-01-01T13:43:29Z","activityTimeZone":"Europe/Paris","status":"COMPLETE","deviceType":"IPHONE","metricSummary":{"calories":"353","fuel":"1453","distance":"5.584712505340576","steps":"0","duration":"0:32:05.321"},"tags":[{"tagType":"WEATHER","tagValue":"SUNNY"},{"tagType":"LOCATION","tagValue":"OUTDOORS"}],"metrics":[]},{"links":[{"rel":"self","href":"https://api.nike.com/v1/me/sport/activities/a66d97ce-52b2-404a-9b93-4b134d4ea673"}],"activityId":"a66d97ce-52b2-404a-9b93-4b134d4ea673","activityType":"ALL_DAY","startTime":"2014-12-31T23:00:00Z","activityTimeZone":"Europe/Paris","status":"IN_PROGRESS","deviceType":"IPHONE","metricSummary":{"calories":"0","fuel":"1453","distance":"0.0","steps":"0","duration":"0:00:00.000"},"tags":[],"metrics":[]},{"links":[{"rel":"self","href":"https://api.nike.com/v1/me/sport/activities/7094000000020299307850007553987370641689"}],"activityId":"7094000000020299307850007553987370641689","activityType":"RUN","startTime":"2014-12-31T18:07:46Z","activityTimeZone":"Europe/Paris","status":"COMPLETE","deviceType":"IPHONE","metricSummary":{"calories":"263","fuel":"1076","distance":"4.160961627960205","steps":"0","duration":"0:23:57.318"},"tags":[{"tagType":"EMOTION","tagValue":"GREAT"},{"tagType":"TEMPERATURE","tagValue":"TEMPERATURE"},{"tagType":"WEATHER","tagValue":"SUNNY"}],"metrics":[]},{"links":[{"rel":"self","href":"https://api.nike.com/v1/me/sport/activities/4fae20c5-b513-4554-a963-314d15551996"}],"activityId":"4fae20c5-b513-4554-a963-314d15551996","activityType":"ALL_DAY","startTime":"2014-12-30T23:00:00Z","activityTimeZone":"Europe/Paris","status":"IN_PROGRESS","deviceType":"IPHONE","metricSummary":{"calories":"0","fuel":"1076","distance":"0.0","steps":"0","duration":"0:00:00.000"},"tags":[],"metrics":[]},{"links":[{"rel":"self","href":"https://api.nike.com/v1/me/sport/activities/4323000000008577366930001701558431789625"}],"activityId":"4323000000008577366930001701558431789625","activityType":"RUN","startTime":"2014-12-30T20:59:07Z","activityTimeZone":"Europe/Paris","status":"COMPLETE","deviceType":"IPHONE","metricSummary":{"calories":"274","fuel":"1117","distance":"4.324224948883057","steps":"0","duration":"0:25:29.833"},"tags":[{"tagType":"WEATHER","tagValue":"CLOUDY"},{"tagType":"EMOTION","tagValue":"GREAT"},{"tagType":"LOCATION","tagValue":"OUTDOORS"}],"metrics":[]}],"paging":{"next":"/v1/me/sport/activities?access_token=OwTyiRUlhaNVIP8AKVfYrUA9a1wl&offset=6","previous":null}}'
+    http_version: 
+  recorded_at: Sat, 10 Jan 2015 06:46:04 GMT
+recorded_with: VCR 2.8.0
