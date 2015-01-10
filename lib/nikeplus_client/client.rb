@@ -6,10 +6,11 @@ module NikeplusClient
     end
 
     def token
+      return @access_token if @access_token
       response = request_token
       response = extract_json_from_response_body(response.data[:body])
       fail WrongCredential if response.key?('error')
-      @token = response['access_token']
+      @access_token = response['access_token']
     end
 
     private
