@@ -1,5 +1,7 @@
 module NikeplusClient
   class Account < Base
+    API_URL = "https://developer.nike.com/services/login"
+
     def initialize(username, password)
       @username = username
       @password = password
@@ -23,7 +25,7 @@ module NikeplusClient
     end
 
     def request_token
-      post_request('https://developer.nike.com/services/login', username: @username, password: @password)
+      post_request(API_URL, username: @username, password: @password)
     end
   end
 
