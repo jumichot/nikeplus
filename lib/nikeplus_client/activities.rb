@@ -7,8 +7,16 @@ module NikeplusClient
     end
 
     def fetch(options = {count:  999})
-      response = get_request(API_URL + "?#{build_params(options)}")
+      response = get_request(build_url(options))
       extract_hash_from_json_response_body(response)["data"]
+    end
+
+    private
+
+    def build_url(options = {})
+      uri = URI.parse(API_URL)
+      uri.query = [uri.query, build_params(options)].compact.join('&') 
+      uri.to_s
     end
   end
 end
