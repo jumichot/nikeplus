@@ -1,6 +1,3 @@
-require 'excon'
-require 'json'
-
 module NikeplusClient
   class Client
     def initialize(username, password)
