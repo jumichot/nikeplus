@@ -6,6 +6,10 @@ module NikeplusClient
                  headers: { 'Content-Type' => 'application/x-www-form-urlencoded' })
     end
 
+    def build_params(options)
+      URI.encode_www_form({access_token: @token}.merge(options))
+    end
+
     def extract_hash_from_json_response_body(response)
       JSON.parse(response.data[:body])
     end
