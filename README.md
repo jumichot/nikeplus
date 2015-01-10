@@ -7,6 +7,10 @@
 
 TODO: Write a gem description
 
+## TODO
+- add cache
+- add configuration
+
 ## Installation
 
 Add this line to your application's Gemfile:
