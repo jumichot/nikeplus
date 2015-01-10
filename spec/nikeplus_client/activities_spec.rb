@@ -4,9 +4,9 @@ describe NikeplusClient::Activities do
   let(:token) { "foobar" }
 
   it 'retrieve activities' do
-    VCR.use_cassette("activities") do
+    VCR.use_cassette("all_activities") do
       activities = NikeplusClient::Activities.new(token)
-      expect(activities.fetch).to be_kind_of(Array)
+      expect(activities.fetch({count:  999})).to be_kind_of(Array)
     end
   end
 end
