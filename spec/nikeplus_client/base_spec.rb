@@ -1,4 +1,9 @@
 require 'spec_helper'
+module NikeplusClient
+  class TestClass < Base
+    API_URL = "https://example.com?existing_params=true"
+  end
+end
 
 describe NikeplusClient::Base do
   let(:base) { NikeplusClient::Base.new() }
@@ -28,5 +33,10 @@ describe NikeplusClient::Base do
     stub_request(:get, "www.example.com").to_return(:body => "ok")
     response = base.get_request("http://www.example.com")
     expect(response.body).to eq "ok"
+  end
+
+  it "#build_url to add get parameters in url even if existing ones" do
+    test_class = NikeplusClient::TestClass.new()
+    expect(test_class.build_url({toto: "tata"})).to eq "https://example.com?existing_params=true&toto=tata"
   end
 end

@@ -2,11 +2,8 @@ module NikeplusClient
   class Activities < Base
     API_URL = "https://api.nike.com/v1/me/sport/activities"
 
-    def initialize(token)
-      @token = token
-    end
-
-    def fetch(options = {count:  999})
+    def fetch(options = {})
+      options = load_default_option(options)
       response = get_request(build_url(options))
       data = extract_hash_from_json_response_body(response)["data"]
       data.map do |activity|
@@ -16,10 +13,9 @@ module NikeplusClient
 
     private
 
-    def build_url(options = {})
-      uri = URI.parse(API_URL)
-      uri.query = [uri.query, encode_params(options)].compact.join('&') 
-      uri.to_s
+    def load_default_option(options)
+      #Load by default all activities (at least last 10 000)
+      {count: 10000}.merge(options)
     end
   end
 end
