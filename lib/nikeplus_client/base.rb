@@ -10,9 +10,8 @@ module NikeplusClient
       Excon.get(url)
     end
 
-    def build_params(options)
-      params = @token ? {access_token: @token}.merge(options) : options
-      URI.encode_www_form(params)
+    def encode_params(options)
+      URI.encode_www_form(options)
     end
 
     def extract_hash_from_json_response_body(response)

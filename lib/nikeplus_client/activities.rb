@@ -18,7 +18,7 @@ module NikeplusClient
 
     def build_url(options = {})
       uri = URI.parse(API_URL)
-      uri.query = [uri.query, build_params(options)].compact.join('&') 
+      uri.query = [uri.query, encode_params(options)].compact.join('&') 
       uri.to_s
     end
   end
