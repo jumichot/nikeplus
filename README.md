@@ -3,9 +3,9 @@
 Nike+ Ruby API wrapper
 
 [![Build Status](https://travis-ci.org/jumichot/nikeplus.svg?branch=master)](https://travis-ci.org/jumichot/nikeplus)
-[![Coverage Status](https://coveralls.io/repos/jumichot/nikeplus/badge.png?branch=master)](https://coveralls.io/r/jumichot/nikeplus?branch=master)
 [![Dependency Status](https://gemnasium.com/jumichot/nikeplus.svg)](https://gemnasium.com/jumichot/nikeplus)
 [![Code Climate](https://codeclimate.com/github/jumichot/nikeplus/badges/gpa.svg)](https://codeclimate.com/github/jumichot/nikeplus)
+[![Test Coverage](https://codeclimate.com/github/jumichot/nikeplus/badges/coverage.svg)](https://codeclimate.com/github/jumichot/nikeplus)
 
 TODO: Write a gem description
 
