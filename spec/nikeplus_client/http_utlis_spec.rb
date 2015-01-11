@@ -1,12 +1,12 @@
 require 'spec_helper'
 module NikeplusClient
   class TestClass
-    include Base
+    include HTTPUtils
     API_URL = "https://example.com?existing_params=true"
   end
 end
 
-describe NikeplusClient::Base do
+describe NikeplusClient::HTTPUtils do
   let(:base) { NikeplusClient::TestClass.new() }
 
   it "#post_request with excon" do

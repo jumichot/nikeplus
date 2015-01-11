@@ -1,6 +1,6 @@
 module NikeplusClient
   class Account
-    include Base
+    include HTTPUtils
 
     API_URL = "https://developer.nike.com/services/login"
 

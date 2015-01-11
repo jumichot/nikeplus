@@ -1,6 +1,6 @@
 module NikeplusClient
   class Activities
-    include Base
+    include HTTPUtils
     API_URL = "https://api.nike.com/v1/me/sport/activities"
 
     def fetch(options = {})
