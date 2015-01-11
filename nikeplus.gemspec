@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'nikeplus_client/version'
+require 'nikeplus/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "nikeplus_client"
-  spec.version       = NikeplusClient::VERSION
+  spec.name          = "nikeplus"
+  spec.version       = NikePlus::VERSION
   spec.authors       = ["julien michot"]
   spec.email         = ["ju.michot@gmail.com"]
-  spec.summary       = %q{nike+ client to retrieve activities}
+  spec.summary       = %q{nike+ ruby api wrapper}
   spec.description   = %q{nike+ client to retrieve activities}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/jumichot/nikeplus"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

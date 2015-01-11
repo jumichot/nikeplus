@@ -1,4 +1,4 @@
-module NikeplusClient
+module NikePlus
   class MetricSummary
     include Virtus.model
 

@@ -1,13 +1,13 @@
 require 'spec_helper'
-module NikeplusClient
+module NikePlus
   class TestClass
     include HTTPUtils
     API_URL = "https://example.com?existing_params=true"
   end
 end
 
-describe NikeplusClient::HTTPUtils do
-  let(:base) { NikeplusClient::TestClass.new() }
+describe NikePlus::HTTPUtils do
+  let(:base) { NikePlus::TestClass.new() }
 
   it "#post_request with excon" do
     stub_request(:post, "www.example.com")
@@ -31,7 +31,7 @@ describe NikeplusClient::HTTPUtils do
   end
 
   it "#build_url to add get parameters in url even if existing ones" do
-    test_class = NikeplusClient::TestClass.new()
+    test_class = NikePlus::TestClass.new()
     expect(test_class.build_url({toto: "tata"})).to eq "https://example.com?existing_params=true&toto=tata"
   end
 end

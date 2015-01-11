@@ -1,4 +1,4 @@
-module NikeplusClient
+module NikePlus
   class Activity
     include Virtus.model
 

@@ -1,9 +1,11 @@
-# NikeplusClient
+# NikePlus
 
-[![Build Status](https://travis-ci.org/jumichot/nikeplus_client.svg?branch=master)](https://travis-ci.org/jumichot/nikeplus_client)
-[![Coverage Status](https://coveralls.io/repos/jumichot/nikeplus_client/badge.png?branch=master)](https://coveralls.io/r/jumichot/nikeplus_client?branch=master)
-[![Dependency Status](https://gemnasium.com/jumichot/nikeplus_client.svg)](https://gemnasium.com/jumichot/nikeplus_client)
-[![Code Climate](https://codeclimate.com/github/jumichot/nikeplus_client/badges/gpa.svg)](https://codeclimate.com/github/jumichot/nikeplus_client)
+Nike+ Ruby API wrapper
+
+[![Build Status](https://travis-ci.org/jumichot/nikeplus.svg?branch=master)](https://travis-ci.org/jumichot/nikeplus)
+[![Coverage Status](https://coveralls.io/repos/jumichot/nikeplus/badge.png?branch=master)](https://coveralls.io/r/jumichot/nikeplus?branch=master)
+[![Dependency Status](https://gemnasium.com/jumichot/nikeplus.svg)](https://gemnasium.com/jumichot/nikeplus)
+[![Code Climate](https://codeclimate.com/github/jumichot/nikeplus/badges/gpa.svg)](https://codeclimate.com/github/jumichot/nikeplus)
 
 TODO: Write a gem description
 
@@ -16,7 +18,7 @@ TODO: Write a gem description
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'nikeplus_client'
+gem 'nikeplus'
 ```
 
 And then execute:
@@ -25,7 +27,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install nikeplus_client
+    $ gem install nikeplus
 
 ## Usage
 
@@ -51,7 +53,7 @@ gem install terminal-notifier-guard
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/nikeplus_client/fork )
+1. Fork it ( https://github.com/[my-github-username]/nikeplus/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

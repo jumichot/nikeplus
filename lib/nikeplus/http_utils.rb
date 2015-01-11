@@ -1,4 +1,4 @@
-module NikeplusClient
+module NikePlus
   module HTTPUtils
     def post_request(url, body)
       Excon.post(url,

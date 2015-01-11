@@ -1,7 +1,7 @@
 require 'coveralls'
 Coveralls.wear!
 
-require 'nikeplus_client'
+require 'nikeplus'
 require 'vcr'
 require 'webmock/rspec'
 
