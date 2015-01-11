@@ -1,5 +1,7 @@
 module NikeplusClient
-  class Account < Base
+  class Account
+    include Base
+
     API_URL = "https://developer.nike.com/services/login"
 
     def initialize(username, password)

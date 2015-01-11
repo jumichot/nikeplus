@@ -1,5 +1,5 @@
 module NikeplusClient
-  class Base
+  module Base
     def post_request(url, body)
       Excon.post(url,
                  body: URI.encode_www_form(body),

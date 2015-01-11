@@ -1,12 +1,13 @@
 require 'spec_helper'
 module NikeplusClient
-  class TestClass < Base
+  class TestClass
+    include Base
     API_URL = "https://example.com?existing_params=true"
   end
 end
 
 describe NikeplusClient::Base do
-  let(:base) { NikeplusClient::Base.new() }
+  let(:base) { NikeplusClient::TestClass.new() }
 
   it "#post_request with excon" do
     stub_request(:post, "www.example.com")
