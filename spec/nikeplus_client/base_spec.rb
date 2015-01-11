@@ -23,12 +23,6 @@ describe NikeplusClient::Base do
     expect(base.extract_hash_from_json_response_body(response)).to eq({"access_token" => "thetoken"})
   end
 
-  it "#encode_params" do
-    # TODO: set @token for base class and modify this test
-    str = base.encode_params({hello: "the world"})
-    expect(str).to eq "hello=the+world"
-  end
-
   it "#get_request" do
     stub_request(:get, "www.example.com").to_return(:body => "ok")
     response = base.get_request("http://www.example.com")

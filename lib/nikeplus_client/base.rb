@@ -10,17 +10,13 @@ module NikeplusClient
       Excon.get(url)
     end
 
-    def encode_params(options)
-      URI.encode_www_form(options)
-    end
-
     def extract_hash_from_json_response_body(response)
       JSON.parse(response.data[:body])
     end
 
     def build_url(options = {})
       uri = URI.parse(self.class.const_get('API_URL'))
-      uri.query = [uri.query, encode_params(options)].compact.join('&')
+      uri.query = [uri.query, URI.encode_www_form(options)].compact.join('&')
       uri.to_s
     end
   end
