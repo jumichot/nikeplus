@@ -12,9 +12,10 @@ module NikePlus
     attribute :status, String
     attribute :deviceType, String
     attribute :metricSummary, MetricSummary
+    attribute :metrics, Array[Metric]
     attribute :tags, Array[Tag]
 
-    def fetch(options = {})
+    def fetch_details(options = {})
       response = get_request(build_url(options))
       data = extract_hash_from_json_response_body(response)
       self.attributes = data

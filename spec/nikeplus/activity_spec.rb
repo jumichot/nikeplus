@@ -7,7 +7,7 @@ describe NikePlus::Activity do
     it "#fetch return a new Activity" do
       VCR.use_cassette("go_activity") do
         activity = NikePlus::Activity.new(activityId: "3198000000011524937810007382618856401351")
-        activity.fetch(access_token: "foobar")
+        activity.fetch_details(access_token: "foobar")
         expect(activity).to be_kind_of(NikePlus::Activity)
         expect(activity.activityType).to eq "RUN"
       end
