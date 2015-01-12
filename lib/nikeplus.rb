@@ -11,4 +11,17 @@ require 'nikeplus/activity'
 require 'nikeplus/activities'
 
 module NikePlus
+  @@config = {}
+
+  def self.configure(options={})
+    @@config[:access_token] = options[:access_token] if options[:access_token]
+  end
+
+  def self.configuration
+    @@config
+  end
+
+  def self.reset_config
+    @@config = {}
+  end
 end

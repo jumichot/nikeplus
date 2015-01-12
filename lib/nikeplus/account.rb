@@ -10,10 +10,10 @@ module NikePlus
     end
 
     def token
-      return @access_token if @access_token
+      return NikePlus.configuration[:access_token] if NikePlus.configuration[:access_token]
       response = extract_hash_from_json_response_body(request_token)
       check_token_validy(response)
-      @access_token = response['access_token']
+      NikePlus.configure(access_token: response['access_token'])
     end
 
     private

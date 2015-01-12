@@ -7,10 +7,9 @@ Nike+ Ruby API wrapper
 [![Code Climate](https://codeclimate.com/github/jumichot/nikeplus/badges/gpa.svg)](https://codeclimate.com/github/jumichot/nikeplus)
 [![Test Coverage](https://codeclimate.com/github/jumichot/nikeplus/badges/coverage.svg)](https://codeclimate.com/github/jumichot/nikeplus)
 
-TODO: Write a gem description
-
 ## TODO
-- add cache
+- handle refresh token
+- add cache strategy
 - add configuration
 
 ## Installation
