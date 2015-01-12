@@ -16,6 +16,8 @@ module NikePlus
 
     def build_url(options = {})
       uri = URI.parse(self.class.const_get('API_URL'))
+      token = NikePlus.configuration[:access_token]
+      options.merge!(access_token: token) if token
       uri.query = [uri.query, URI.encode_www_form(options)].compact.join('&')
       uri.to_s
     end
