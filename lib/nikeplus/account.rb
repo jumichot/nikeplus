@@ -9,7 +9,7 @@ module NikePlus
       @password = password
     end
 
-    def token
+    def fetch_token
       return NikePlus.configuration[:access_token] if NikePlus.configuration[:access_token]
       response = extract_hash_from_json_response_body(request_token)
       check_token_validy(response)
