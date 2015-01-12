@@ -3,18 +3,21 @@ module NikePlus
     include HTTPUtils
     API_URL = "https://api.nike.com/v1/me/sport/activities"
 
-    def fetch(options = {})
-      options = load_default_option(options)
+    def fetch_data(options = {})
+      options = fetch_default_options(options)
       response = get_request(build_url(options))
-      data = extract_hash_from_json_response_body(response)["data"]
-      data.map do |activity|
+      extract_hash_from_json_response_body(response)["data"]
+    end
+
+    def activities(options = {})
+      fetch_data(options).map do |activity|
         Activity.new(activity)
       end
     end
 
     private
 
-    def load_default_option(options)
+    def fetch_default_options(options)
       #Load by default all activities (at least last 10 000)
       {count: 10000}.merge(options)
     end
