@@ -8,6 +8,8 @@ require 'nikeplus/account'
 require 'nikeplus/metric_summary'
 require 'nikeplus/metric'
 require 'nikeplus/tag'
+require 'nikeplus/waypoint'
+require 'nikeplus/gps_data'
 require 'nikeplus/activity'
 require 'nikeplus/activities'
 

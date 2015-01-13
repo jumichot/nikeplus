@@ -12,5 +12,12 @@ describe NikePlus::Activity do
         expect(activity.activityType).to eq "RUN"
       end
     end
+
+    it "#fetch_gps_data" do
+      VCR.use_cassette("gps_activity") do
+        activity = NikePlus::Activity.new(activityId: "3198000000011524937810007382618856401351")
+        expect(activity.fetch_gps_data(access_token: "foobar")).to be_kind_of(NikePlus::GpsData)
+      end
+    end
   end
 end
