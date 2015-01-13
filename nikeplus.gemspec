@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["julien michot"]
   spec.email         = ["ju.michot@gmail.com"]
   spec.summary       = %q{nike+ ruby api wrapper}
-  spec.description   = %q{nike+ client to retrieve activities}
+  spec.description   = %q{nike+ client to retrieve running activities and associated data (like gps, weather, mood...)}
   spec.homepage      = "https://github.com/jumichot/nikeplus"
   spec.license       = "MIT"
 
