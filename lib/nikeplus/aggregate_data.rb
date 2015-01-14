@@ -6,6 +6,7 @@ module NikePlus
     API_URL = "https://api.nike.com/v1/me/sport"
 
     attribute :experienceTypes, Array[String]
+    attribute :summaries, Array[AggregateDataSummary]
 
     def fetch(options = {})
       response = get_request(build_url(options))

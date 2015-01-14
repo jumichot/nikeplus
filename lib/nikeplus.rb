@@ -12,6 +12,7 @@ require 'nikeplus/waypoint'
 require 'nikeplus/gps_data'
 require 'nikeplus/activity'
 require 'nikeplus/activities'
+require 'nikeplus/aggregate_data_summary'
 require 'nikeplus/aggregate_data'
 
 module NikePlus
