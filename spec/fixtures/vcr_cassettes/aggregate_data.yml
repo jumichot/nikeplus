@@ -1,0 +1,30 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.nike.com/v1/me/sport?access_token=foobar
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.43.0
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Content-Type:
+      - application/json;charset=UTF-8
+      Server:
+      - Jetty(9.0.z-SNAPSHOT)
+      X-B3-Traceid:
+      - '4106582639156333869'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"links":[{"rel":"self","href":"https://api.nike.com/v1/me/sport"},{"rel":"activities","href":"https://api.nike.com/v1/me/sport/activities"}],"experienceTypes":["FUELBAND","RUNNING"],"summaries":[{"experienceType":"ALL","records":[{"recordType":"LIFETIMEFUEL","recordValue":"58687"}]},{"experienceType":"FUELBAND","records":[{"recordType":"LIFETIMEFUEL","recordValue":"8166"},{"recordType":"LIFETIMEAVERAGEFUELDAY","recordValue":"0"},{"recordType":"LIFETIMEAVERAGEFUELWEEK","recordValue":"0"},{"recordType":"LIFETIMEAVERAGEFUELMONTH","recordValue":"0"},{"recordType":"TOTALDAILYGOALSACHIEVED","recordValue":"0"},{"recordType":"DAILYGOALTARGETVALUE","recordValue":"0.0"}]},{"experienceType":"RUNNING","records":[{"recordType":"LIFETIMEFUEL","recordValue":"58687"},{"recordType":"LEVEL","recordValue":"2"},{"recordType":"LIFETIMEDISTANCE","recordValue":"245.59406140136716"},{"recordType":"LIFETIMEDURATION","recordValue":"24:37:23.606"},{"recordType":"LIFETIMEAVERAGEPACE","recordValue":"360935.4619333908"},{"recordType":"LONGESTRUNDISTANCE","recordValue":"15.005"}]}]}'
+    http_version: 
+  recorded_at: Wed, 14 Jan 2015 12:12:33 GMT
+recorded_with: VCR 2.8.0
