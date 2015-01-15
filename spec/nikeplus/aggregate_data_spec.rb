@@ -13,10 +13,16 @@ describe NikePlus::Activity do
     end
     it "#summaries has Array of AggregateDataSummary" do
       VCR.use_cassette("aggregate_data") do
-        activity = NikePlus::AggregateData.new()
-        activity.fetch(access_token: token)
+        activity = NikePlus::AggregateData.new().fetch(access_token: token)
         expect(activity.summaries.first).to be_kind_of(NikePlus::AggregateDataSummary)
         expect(activity.summaries.first.experienceType).to eq "ALL"
+      end
+    end
+
+    it "#lifetime_distance return the the sum of all run's distance" do
+      VCR.use_cassette("aggregate_data") do
+        activity = NikePlus::AggregateData.new().fetch(access_token: token)
+        expect(activity.lifetime_distance).to eq 245.6
       end
     end
   end

@@ -14,6 +14,12 @@ module NikePlus
       self.attributes = data
       self
     end
+
+    def lifetime_distance
+      (summaries.last.records.select do |record|
+        record["recordType"] == "LIFETIMEDISTANCE"
+      end.first["recordValue"].to_f*10).round / 10.0
+    end
   end
 end
 
