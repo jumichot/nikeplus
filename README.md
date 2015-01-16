@@ -8,8 +8,10 @@ Nike+ Ruby API wrapper
 [![Test Coverage](https://codeclimate.com/github/jumichot/nikeplus/badges/coverage.svg)](https://codeclimate.com/github/jumichot/nikeplus)
 
 ## TODO
-- add metaprogramming for getter in aggregate data
+- activities as virtus model
 - put models in models folder
+- lifetime distance : refactore this methode
+- add metaprogramming for getter in aggregate data
 - add delegators on Account to aggregate data
 - handle refresh token
 - add cache strategy
