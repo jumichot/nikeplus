@@ -6,6 +6,7 @@ Nike+ Ruby API wrapper
 [![Dependency Status](https://gemnasium.com/jumichot/nikeplus.svg)](https://gemnasium.com/jumichot/nikeplus)
 [![Code Climate](https://codeclimate.com/github/jumichot/nikeplus/badges/gpa.svg)](https://codeclimate.com/github/jumichot/nikeplus)
 [![Test Coverage](https://codeclimate.com/github/jumichot/nikeplus/badges/coverage.svg)](https://codeclimate.com/github/jumichot/nikeplus)
+[![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 
 ## TODO
 - activities as virtus model
