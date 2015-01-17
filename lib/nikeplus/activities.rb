@@ -1,12 +1,19 @@
 module NikePlus
   class Activities
+    include Virtus.model
     include HTTPUtils
+
     API_URL = "https://api.nike.com/v1/me/sport/activities"
+
+    attribute :data, Array[Activity]
+    attribute :paging, Hash
 
     def fetch_data(options = {})
       options = fetch_default_options(options)
       response = get_request(build_url(options))
-      extract_hash_from_json_response_body(response)["data"]
+      data = extract_hash_from_json_response_body(response)
+      self.attributes = data
+      self
     end
 
     def activities(options = {})

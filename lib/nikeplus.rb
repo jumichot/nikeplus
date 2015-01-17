@@ -11,7 +11,7 @@ require 'nikeplus/models/tag'
 require 'nikeplus/models/waypoint'
 require 'nikeplus/models/gps_data'
 require 'nikeplus/models/activity'
-require 'nikeplus/activities'
+require 'nikeplus/models/activities'
 require 'nikeplus/models/aggregate_data_summary'
 require 'nikeplus/models/aggregate_data'
 
