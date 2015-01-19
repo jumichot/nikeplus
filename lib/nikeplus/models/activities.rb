@@ -16,12 +16,6 @@ module NikePlus
       self
     end
 
-    def activities(options = {})
-      fetch_data(options).map do |activity|
-        Activity.new(activity)
-      end
-    end
-
     private
 
     def fetch_default_options(options)
