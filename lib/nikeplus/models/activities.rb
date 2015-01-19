@@ -1,5 +1,5 @@
 module NikePlus
-  class Activities
+  class Activities < Base
     include Virtus.model
     include HTTPUtils
 
