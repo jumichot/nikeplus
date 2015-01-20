@@ -1,5 +1,5 @@
 module NikePlus
-  class AggregateData
+  class AggregateData < Base
     include Virtus.model
     include HTTPUtils
 
