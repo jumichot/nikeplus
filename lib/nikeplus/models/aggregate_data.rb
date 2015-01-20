@@ -8,7 +8,6 @@ module NikePlus
     attribute :experienceTypes, Array[String]
     attribute :summaries, Array[AggregateDataSummary]
 
-
     def lifetime_distance
       (summaries.last.records.select do |record|
         record["recordType"] == "LIFETIMEDISTANCE"
