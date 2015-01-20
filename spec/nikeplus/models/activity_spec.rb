@@ -7,7 +7,7 @@ describe NikePlus::Activity do
     it "#fetch return a new Activity" do
       VCR.use_cassette("go_activity") do
         activity = NikePlus::Activity.new(activityId: "3198000000011524937810007382618856401351")
-        activity.fetch_details(access_token: "foobar")
+        activity.fetch(access_token: "foobar")
         expect(activity).to be_kind_of(NikePlus::Activity)
         expect(activity.activityType).to eq "RUN"
       end
@@ -16,7 +16,7 @@ describe NikePlus::Activity do
     it "#fetch_gps_data" do
       VCR.use_cassette("gps_activity") do
         activity = NikePlus::Activity.new(activityId: "3198000000011524937810007382618856401351")
-        expect(activity.fetch_gps_data(access_token: "foobar")).to be_kind_of(NikePlus::GpsData)
+        expect(activity.gps_data(access_token: "foobar")).to be_kind_of(NikePlus::GpsData)
       end
     end
   end
