@@ -1,5 +1,6 @@
 # NikePlus
 
+
 Nike+ Ruby API wrapper
 
 [![Build Status](https://travis-ci.org/jumichot/nikeplus.svg?branch=master)](https://travis-ci.org/jumichot/nikeplus)
@@ -9,8 +10,8 @@ Nike+ Ruby API wrapper
 [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 
 ## TODO
-- activities as virtus model
-- put models in models folder
+
+- include HTTPutils modul in Base
 - lifetime distance : refactore this methode
 - add metaprogramming for getter in aggregate data
 - add delegators on Account to aggregate data
