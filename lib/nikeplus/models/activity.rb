@@ -1,7 +1,6 @@
 module NikePlus
   class Activity < Base
     include Virtus.model
-    include HTTPUtils
 
     API_URL = "https://api.nike.com/v1/me/sport/activities"
 

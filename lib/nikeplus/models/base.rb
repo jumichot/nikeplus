@@ -1,5 +1,7 @@
 module NikePlus
   class Base
+    include HTTPUtils
+
     def fetch(options = {})
       options = fetch_default_options(options)
       response = get_request(build_url(options))
