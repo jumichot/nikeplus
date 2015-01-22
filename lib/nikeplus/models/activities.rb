@@ -1,7 +1,5 @@
 module NikePlus
   class Activities < Base
-    include Virtus.model
-
     API_URL = "https://api.nike.com/v1/me/sport/activities"
 
     attribute :data, Array[Activity]

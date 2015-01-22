@@ -1,5 +1,6 @@
 module NikePlus
   class Base
+    include Virtus.model
     include HTTPUtils
 
     def fetch(options = {})
