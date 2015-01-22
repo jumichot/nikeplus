@@ -5,7 +5,7 @@ module NikePlus
     API_URL = "https://api.nike.com/v1/me/sport"
 
     attribute :experienceTypes, Array[String]
-    attribute :summaries, Array[AggregateDataSummary]
+    attribute :summaries, Array[AggregateDataSummary], :default => []
 
     def lifetime_distance
       (summaries.last.records.select do |record|
