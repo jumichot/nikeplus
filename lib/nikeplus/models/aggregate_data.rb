@@ -1,7 +1,5 @@
 module NikePlus
   class AggregateData < Base
-    include Virtus.model
-
     API_URL = "https://api.nike.com/v1/me/sport"
 
     attribute :experienceTypes, Array[String]
