@@ -6,9 +6,10 @@ module NikePlus
     attribute :summaries, Array[AggregateDataSummary], :default => []
 
     def lifetime_distance
-      (summaries.last.records.select do |record|
+      distance = Array(summaries.last.records.select do |record|
         record["recordType"] == "LIFETIMEDISTANCE"
-      end.first["recordValue"].to_f*10).round / 10.0
+      end)
+      (distance.first["recordValue"].to_f*10).round / 10.0 if distance
     end
   end
 end
