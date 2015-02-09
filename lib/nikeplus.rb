@@ -19,6 +19,10 @@ require 'nikeplus/models/aggregate_data'
 module NikePlus
   @@config = {}
 
+  def self.new(username, password)
+    self::Account.new(username, password)
+  end
+
   def self.configure(options={})
     @@config[:access_token] = options[:access_token] if options[:access_token]
   end

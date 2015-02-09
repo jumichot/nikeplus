@@ -1,6 +1,11 @@
 require 'spec_helper'
 
 describe NikePlus do
+  it "can initialize an account" do
+    account = NikePlus.new("ju@test.com","123456")
+    expect(account).to be_kind_of(NikePlus::Account)
+  end
+
   describe "NikePlus configuration" do
     it "#configure saves options" do
       NikePlus.configure(access_token: "thetoken")
