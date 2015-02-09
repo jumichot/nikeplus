@@ -10,10 +10,13 @@ Nike+ Ruby API wrapper
 [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 
 ## TODO
+- add fetch token during initialization
+- add json serialization
+- add delegators on Account to aggregate data
+- add usage in this readme
 - lifetime distance : refactore this methode
 - add doc
 - add metaprogramming for getter in aggregate data
-- add delegators on Account to aggregate data
 - handle refresh token
 - add cache strategy
 - add configuration
@@ -36,7 +39,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+nike = NikePlus::Account.new("your-email@gmail.com","your-nike-password")
+nike
+```
+
 
 ## Tests
 Run tests with:
