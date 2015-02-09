@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe NikePlus do
-  describe "NikePlus.configure" do
-    it "saves options" do
+  describe "NikePlus configuration" do
+    it "#configure saves options" do
       NikePlus.configure(access_token: "thetoken")
       expect(NikePlus.configuration).to eq({access_token: "thetoken"})
     end
