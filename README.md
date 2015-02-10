@@ -10,7 +10,6 @@ Nike+ Ruby API wrapper
 [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 
 ## TODO
-- mettre hound
 - add fetch token during initialization
 - add json serialization
 - add delegators on Account to aggregate data

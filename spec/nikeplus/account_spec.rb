@@ -8,8 +8,8 @@ describe NikePlus::Account do
   context "with right credentials" do
     it "retrieve token" do
       VCR.use_cassette("succeed_token_retrieval") do
-        account = NikePlus::Account.new("foo@bar.com", "foobar")
-        expect(account.fetch_token).to eq "thetoken"
+        NikePlus::Account.new("foo@bar.com", "foobar")
+        expect(NikePlus.configuration[:access_token]).to eq "thetoken"
       end
     end
   end
