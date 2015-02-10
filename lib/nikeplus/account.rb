@@ -7,6 +7,7 @@ module NikePlus
     def initialize(username, password)
       @username = username
       @password = password
+      fetch_token
     end
 
     def fetch_token

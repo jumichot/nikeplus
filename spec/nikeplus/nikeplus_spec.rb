@@ -2,8 +2,10 @@ require 'spec_helper'
 
 describe NikePlus do
   it "can initialize an account" do
-    account = NikePlus.new("ju@test.com","123456")
-    expect(account).to be_kind_of(NikePlus::Account)
+      VCR.use_cassette("succeed_token_retrieval") do
+        account = NikePlus::Account.new("foo@bar.com", "foobar")
+        expect(account).to be_kind_of(NikePlus::Account)
+      end
   end
 
   describe "NikePlus configuration" do

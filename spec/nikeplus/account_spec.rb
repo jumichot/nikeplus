@@ -16,10 +16,8 @@ describe NikePlus::Account do
 
   context "with wrong credentials" do
     it "raise an explicit exception" do
-   NikePlus.reset_config
       VCR.use_cassette("failed_token_retrieval") do
-        account = NikePlus::Account.new("wrong@bar.com", "wrong")
-        expect{account.fetch_token}.to raise_error(NikePlus::WrongCredential)
+        expect{NikePlus::Account.new("wrong@bar.com", "wrong")}.to raise_error(NikePlus::WrongCredential)
       end
     end
   end
