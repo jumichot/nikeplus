@@ -17,6 +17,10 @@ module NikePlus
       NikePlus.configure(access_token: response['access_token'])
     end
 
+    def activities
+      NikePlus::Activities.new().fetch()
+    end
+
     private
 
     def check_token_validy(response)
