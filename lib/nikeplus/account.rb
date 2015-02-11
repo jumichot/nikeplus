@@ -18,7 +18,7 @@ module NikePlus
     end
 
     def activities
-      NikePlus::Activities.new().fetch()
+      NikePlus::Activities.new.fetch
     end
 
     private

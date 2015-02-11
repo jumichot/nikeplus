@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe NikePlus::Account do
   before(:each) do
-   NikePlus.reset_config
+    NikePlus.reset_config
   end
 
   it "delegate activities to Activities model" do
@@ -17,12 +17,11 @@ describe NikePlus::Account do
   end
 
   it "cache token result" do
-      VCR.use_cassette("succeed_token_retrieval") do
-        NikePlus::Account.new("foo@bar.com", "foobar").fetch_token
-      end
-      # do not raise vcr unexpected request error message
+    VCR.use_cassette("succeed_token_retrieval") do
       NikePlus::Account.new("foo@bar.com", "foobar").fetch_token
-      expect(NikePlus.configuration).to eq({:access_token=>"thetoken"})
+    end
+    NikePlus::Account.new("foo@bar.com", "foobar").fetch_token
+    expect(NikePlus.configuration).to eq({ access_token: "thetoken" })
   end
 
   context "with right credentials" do
