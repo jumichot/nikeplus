@@ -10,9 +10,7 @@ Nike+ Ruby API wrapper
 [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 
 ## TODO
-- add fetch token during initialization
-- add json serialization
-- add delegators on Account to aggregate data
+- add json serialization ?
 - add usage in this readme
 - lifetime distance : refactore this methode
 - add doc
