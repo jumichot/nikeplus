@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.nike.com/v1/me/sport/activities?access_token=foobar&count=999
+    uri: https://api.nike.com/v1/me/sport/activities?access_token=thetoken&count=10000
     body:
       encoding: US-ASCII
       string: ''
