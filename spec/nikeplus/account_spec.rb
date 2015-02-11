@@ -21,7 +21,7 @@ describe NikePlus::Account do
       NikePlus::Account.new("foo@bar.com", "foobar").fetch_token
     end
     NikePlus::Account.new("foo@bar.com", "foobar").fetch_token
-    expect(NikePlus.configuration).to eq({ access_token: "thetoken" })
+    expect(NikePlus.configuration).to eq( access_token: "thetoken" )
   end
 
   context "with right credentials" do
