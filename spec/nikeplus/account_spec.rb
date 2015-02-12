@@ -11,9 +11,9 @@ describe NikePlus::Account do
       account = NikePlus::Account.new("foo@bar.com", "foobar")
     end
     VCR.use_cassette("all_activities") do
-      expect(account.activities.data.first).to be_kind_of NikePlus::Activity
+      expect(account.activities).to be_kind_of Array
+      expect(account.activities.first).to be_kind_of NikePlus::Activity
     end
-
   end
 
   it "cache token result" do

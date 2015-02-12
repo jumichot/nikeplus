@@ -18,7 +18,7 @@ module NikePlus
     end
 
     def activities
-      NikePlus::Activities.new.fetch
+      @activitities ||= NikePlus::Activities.new.fetch.data
     end
 
     private
